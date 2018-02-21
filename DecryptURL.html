@@ -1,0 +1,17 @@
+
+<html>
+<head>
+<title>Office 365 ATP Safe Link Decoder</title>
+<link rel='stylesheet' href='o365atp.css' type='text/css'>
+<script type="text/javascript" src='o365atp.js'></script>
+</head>
+<body>
+  <h1> Office365 ATP URL Decoder Scripts </h1>
+<div class="url_entry_title">Paste SafeLinks URL:</div>
+<textarea autofocus id="safelink" class="url_entry" onchange="decode_url()" onpaste="decode_url()"></textarea>
+<div class="clear_container"><a href="javascript:clear()" class="clear_button">[clear]</a></div>
+<div class="url_results_title">Decoded URL:</div>
+<textarea id="target_url" class="url_target"></textarea>
+<!-- <p class="adv_text">Click <a class="office_link" href="https://products.office.com/en-us/exchange/online-email-threat-protection">here</a> to learn more about Office 365 Advanced Threat Protection.</p> -->
+</body>
+</html>
