@@ -1,0 +1,197 @@
+
+<html>
+
+  <head>
+
+    <title>Office 365 ATP Safe Link Decoder</title>
+
+      <script src="https://thimble.mozilla.org/resources/remix/index.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+ function decode_url()
+      {
+     setTimeout("generate_decode_url(), 10");
+   }
+
+    function generate_decode_url() {
+      var link = document.getElementById("safelink").value;
+      var url_parts = link.split("?")[1];
+      var params = url_parts.split("&");
+      var target_url = "Error:  couldn't find target URL.";
+    /*  if (target_url === "")
+      {
+      alert("Please input a Value");
+      return false;
+      }
+      else
+      {
+      alert('Code has accepted : you can try another');
+      return true;
+      */
+      for (x = 0; x < params.length; x++) {
+        namval = params[x].split("=");
+        if (namval[0] == "url") target_url = namval[1];
+      }
+      decode_url = decodeURIComponent(target_url);
+
+
+    //  document.getElementById("target_url").value = decode_url;
+
+    }
+
+    function clear() {
+      location.reload();
+    }
+    function target_url() {
+        alert(location.url_target=decode_url);
+        prompt("Copy to clipboard: Ctrl+C, Enter", location.url_target=decode_url);
+    }
+
+    </script>
+
+
+<style>
+.details-bar.cleanslate {
+  display: none !important;
+}
+
+h2{
+  position: relative;
+  height: 100px;
+  padding: 10px 10px 10px 10px;
+  margin-left: 25%;
+  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  color: purple;
+
+}
+
+.url_entry
+{
+  position: relative;
+  height: 100px;
+  width: 60%;
+  padding: 10px 10px 10px 10px;
+  margin-left: 20%;
+  border: 3px;
+  border-style: solid;
+  border-color: #999999;
+  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  color: #777777;
+}
+
+.url_entry_title
+{
+  position: relative;
+  width: 60%;
+  padding: 0px 0px 0px 0px;
+  margin-left: 20%;
+  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-size: larger;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+}
+
+.url_results_title
+{
+  position: relative;
+  width: 40%;
+  padding: 0px 0px 0px 0px;
+  margin-left: 20%;
+  margin-top: 5%;
+  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-size: larger;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  color: #666666;
+}
+
+.url_target
+{
+  position: relative;
+  height: 100px;
+  width: 60%;
+  padding: 10px 10px 10px 10px;
+  margin-left: 20%;
+  border: 3px;
+  border-style: solid;
+  border-color: #999999;
+  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-size: larger;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  color: #111111;
+}
+
+.clear_container
+{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 10px;
+
+}
+
+.adv_text
+{
+  position: relative;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 30px;
+  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  color: #555555;
+  text-align: center;
+}
+
+.clear_button
+{
+  position: relative;
+  float: right;
+  font-family: Verdana;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  color: #666666;
+  text-decoration: none;
+  background-color: #e7e7e7;
+}
+
+a:hover {
+  color: #CC0000;
+}
+
+.office_link
+{
+  color: #ff9000;
+}
+</style>
+
+
+</head>
+
+  <body>
+    <h2> Office365 ATP Safelinks URL Decoder </h2>
+    <div class="url_entry_title">Paste SafeLinks URL:</div>
+    <textarea autofocus id="safelink" class="url_entry" onchange="decode_url()" onpaste="decode_url()"></textarea>
+    <div class="clear_container"><button id="clear_button" class="clear_button" disabled="disabled">
+<a  href="javascript:clear()" class="clear_button"> Clear </a>
+      </button>
+<button onclick="target_url()">Decode</button>
+
+    </div>
+  <!--  <div class="url_results_title">Decoded URL:</div>
+    <textarea id="target_url" class="url_target"></textarea> -->
+
+  </body>
+
+</html>
