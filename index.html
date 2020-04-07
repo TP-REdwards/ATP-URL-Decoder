@@ -18,7 +18,7 @@
       var url_parts = link.split("?")[1];
       var params = url_parts.split("&");
       var target_url = "Error:  couldn't find target URL.";
-    /*  if (target_url === "")
+  
       {
       alert("Please input a Value");
       return false;
@@ -27,7 +27,7 @@
       {
       alert('Code has accepted : you can try another');
       return true;
-      */
+      
       for (x = 0; x < params.length; x++) {
         namval = params[x].split("=");
         if (namval[0] == "url") target_url = namval[1];
@@ -35,7 +35,7 @@
       decode_url = decodeURIComponent(target_url);
 
 
-    //  document.getElementById("target_url").value = decode_url;
+   
 
     }
 
@@ -189,8 +189,6 @@ a:hover {
 <button onclick="target_url()">Decode</button>
 
     </div>
-  <!--  <div class="url_results_title">Decoded URL:</div>
-    <textarea id="target_url" class="url_target"></textarea> -->
 
   </body>
 
