@@ -1,13 +1,16 @@
 .details-bar.cleanslate {
   display: none !important;
 }
+body {
+ background-color: gray;
 
+}
 h2{
   position: relative;
   height: 100px;
   padding: 10px 10px 10px 10px;
   margin-left: 25%;
-  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-family: 'Segoe UI',Arial, Geneva, sans-serif;
   color: purple;
 
 }
@@ -22,7 +25,7 @@ h2{
   border: 3px;
   border-style: solid;
   border-color: #999999;
-  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-family: 'Segoe UI',Arial, Geneva, sans-serif;
   font-size: small;
   font-style: normal;
   font-variant: normal;
@@ -36,7 +39,7 @@ h2{
   width: 60%;
   padding: 0px 0px 0px 0px;
   margin-left: 20%;
-  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-family: 'Segoe UI',Arial, Geneva, sans-serif;
   font-size: larger;
   font-style: normal;
   font-variant: normal;
@@ -50,7 +53,7 @@ h2{
   padding: 0px 0px 0px 0px;
   margin-left: 20%;
   margin-top: 5%;
-  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-family: 'Segoe UI',Arial, Geneva, sans-serif;
   font-size: larger;
   font-style: normal;
   font-variant: normal;
@@ -58,7 +61,7 @@ h2{
   color: #666666;
 }
 
-.url_target
+url_target
 {
   position: relative;
   height: 100px;
@@ -68,7 +71,7 @@ h2{
   border: 3px;
   border-style: solid;
   border-color: #999999;
-  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-family: 'Segoe UI',Arial, Geneva, sans-serif;
   font-size: larger;
   font-style: normal;
   font-variant: normal;
@@ -90,7 +93,7 @@ h2{
   width: 60%;
   margin-left: 20%;
   margin-top: 30px;
-  font-family: 'Segoe UI',Verdana, Geneva, sans-serif;
+  font-family: 'Segoe UI',Arial, Geneva, sans-serif;
   font-size: medium;
   font-style: normal;
   font-variant: normal;
@@ -103,12 +106,12 @@ h2{
 {
   position: relative;
   float: right;
-  font-family: Verdana;
+  font-family: Arial;
   font-size: medium;
   font-style: normal;
   font-variant: normal;
-  font-weight: 300;
-  color: #666666;
+  font-weight: 200;
+  color: red;
   text-decoration: none;
   background-color: #e7e7e7;
 }

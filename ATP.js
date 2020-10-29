@@ -1,9 +1,9 @@
 function decode_url()
   {
- setTimeout("generate_decode_url(), 10");
+ setTimeout("my_decoded_url(), 30");
 }
 
-function generate_decode_url() {
+function my_decoded_url() {
   var link = document.getElementById("safelink").value;
   var url_parts = link.split("?")[1];
   var params = url_parts.split("&");
@@ -12,6 +12,9 @@ function generate_decode_url() {
   for (x = 0; x < params.length; x++) {
     namval = params[x].split("=");
     if (namval[0] == "url") target_url = namval[1];
+    else if (false) {
+      aler("Please enter a valid SafeLinks");
+    }
   }
   decode_url = decodeURIComponent(target_url);
 
@@ -23,4 +26,5 @@ function clear() {
 function target_url() {
     alert(location.url_target=decode_url);
     prompt("Copy to clipboard: Ctrl+C, Enter", location.url_target=decode_url);
+    location.reload();
 }
